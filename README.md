@@ -2,15 +2,16 @@
 Template to create a Windows/Linux/Mac desktop app with a server-side UI
 and HTML frontend within minutes. **Keep in mind that this project is still in beta and not released yet.**
 
-**Make sure that strings/comments across the project are also affected when refactoring/renaming.**
+![](.github/images/img.png)
 
 **TODO**
  - Executables for Windows/Linux/Mac via JavaPackager. Currently, only
 a shaded .jar gets generated that can be double-clicked to open the window
 (first time takes a bit since jcef gets downloaded).
  - Bundle jcef with installer to avoid waiting at first launch.
-
-![](.github/images/img.png)
+ - Minimize shaded jar to save disk space.
+ - Install jcef globally to save disk space.
+ - Fix few seconds of blank screen on first page load.
 
 ## Running the application
 
