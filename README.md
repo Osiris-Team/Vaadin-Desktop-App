@@ -8,6 +8,7 @@ and HTML frontend within minutes. **Keep in mind that this project is still in b
  - Executables for Windows/Linux/Mac via JavaPackager. Currently, only
 a shaded .jar gets generated that can be double-clicked to open the window
 (first time takes a bit since jcef gets downloaded).
+ - Bundle jcef with installer to avoid waiting at first launch.
 
 ## Running the application
 
