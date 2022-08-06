@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>16</java.version>
         <vaadin.version>23.1.4</vaadin.version>
         <selenium.version>4.2.1</selenium.version>
     </properties>
@@ -45,6 +45,10 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -96,6 +100,18 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>me.friwi</groupId>
+            <artifactId>jcefmaven</artifactId>
+            <version>100.0.14.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Osiris-Team</groupId>
+            <artifactId>AutoPlug-Core</artifactId>
+            <version>15.1</version>
+        </dependency>
+
+        <!-- TEST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

@@ -1,7 +1,13 @@
-# My Todo
+# Vaadin-Desktop-App
+Template to create a Windows/Linux/Mac desktop app with a server-side UI
+and HTML frontend within minutes. **Keep in mind that this project is still in beta and not released yet.**
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+**Make sure that strings/comments across the project are also affected when refactoring/renaming.**
+
+**TODO**
+ - Executables for Windows/Linux/Mac via JavaPackager. Currently, only
+a shaded .jar gets generated that can be double-clicked to open the window
+(first time takes a bit since jcef gets downloaded).
 
 ## Running the application
 
