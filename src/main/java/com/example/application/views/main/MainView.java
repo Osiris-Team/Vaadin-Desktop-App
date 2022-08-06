@@ -1,5 +1,6 @@
 package com.example.application.views.main;
 
+import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
@@ -9,7 +10,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Main")
-@Route(value = "")
+@Route(value = "", layout = MainLayout.class)
 public class MainView extends HorizontalLayout {
 
     private TextField name;
@@ -23,7 +24,8 @@ public class MainView extends HorizontalLayout {
         });
         sayHello.addClickShortcut(Key.ENTER);
 
-        setMargin(true);
+        setMargin(false); // margin will result in scrollbar being shown
+        setPadding(true); // thus, we use padding instead
         setVerticalComponentAlignment(Alignment.END, name, sayHello);
 
         add(name, sayHello);

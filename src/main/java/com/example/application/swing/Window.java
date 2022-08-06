@@ -1,5 +1,6 @@
-package com.example.application;
+package com.example.application.swing;
 
+import com.example.application.App;
 import me.friwi.jcefmaven.CefAppBuilder;
 import me.friwi.jcefmaven.MavenCefAppHandlerAdapter;
 import me.friwi.jcefmaven.impl.progress.ConsoleProgressHandler;
@@ -20,8 +21,8 @@ import java.util.Objects;
 public class Window extends JFrame {
     private final CefApp cefApp;
     private final CefClient client;
-    private final CefBrowser browser;
-    private final Component browserUI;
+    public final CefBrowser browser;
+    public final Component browserUI;
 
     public Window() throws HeadlessException {
         this("http://localhost:" + App.port);
@@ -111,9 +112,13 @@ public class Window extends JFrame {
             // (6) All UI components are assigned to the default content pane of this
             //     JFrame and afterwards the frame is made visible to the user.
             getContentPane().add(browserUI, BorderLayout.CENTER);
-            pack();
+            if(widthPercent <= 0 || heightPercent <= 0){
+                widthPercent = 100;
+                heightPercent = 100;
+            }
             width(widthPercent);
             height(heightPercent);
+            revalidate();
             setVisible(true);
 
             // (7) To take care of shutting down CEF accordingly, it's important to call

@@ -8,6 +8,7 @@
     "@polymer/iron-meta": "3.0.1",
     "@polymer/iron-resizable-behavior": "3.0.1",
     "@polymer/polymer": "3.5.1",
+    "@vaadin-component-factory/vcf-nav": "^1.0.6",
     "@vaadin/accordion": "23.1.4",
     "@vaadin/app-layout": "23.1.4",
     "@vaadin/avatar": "23.1.4",
@@ -260,7 +261,8 @@
     "@polymer/polymer": "$@polymer/polymer",
     "chokidar": "$chokidar",
     "date-fns": "$date-fns",
-    "line-awesome": "$line-awesome"
+    "line-awesome": "$line-awesome",
+    "@vaadin-component-factory/vcf-nav": "$@vaadin-component-factory/vcf-nav"
   },
   "vaadin": {
     "dependencies": {
@@ -404,6 +406,6 @@
       "workbox-precaching": "6.5.0",
       "workbox-webpack-plugin": "6.5.0"
     },
-    "hash": "a8e9c833ba4e19ce19bdcbca00a7b4b2dfe9b64ffd0b8eecbf43ea3410d108a7"
+    "hash": "79ae85f2886331981c2cba2e9c891da2c26d9c84c024aa940d22cb5c31a2eb25"
   }
 }

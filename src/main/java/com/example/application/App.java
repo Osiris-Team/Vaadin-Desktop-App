@@ -1,5 +1,6 @@
 package com.example.application;
 
+import com.example.application.swing.Window;
 import com.osiris.autoplug.core.logger.AL;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;
@@ -9,17 +10,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.env.PropertiesPropertySource;
-import org.springframework.core.metrics.ApplicationStartup;
-import org.springframework.core.metrics.StartupStep;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.Properties;
@@ -37,7 +33,7 @@ import java.util.Properties;
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class App extends SpringBootServletInitializer implements AppShellConfigurator {
     public static ConfigurableApplicationContext context;
-    public static Window window;
+    public static com.example.application.swing.Window window;
     public static int port;
     public static File workingDir = new File(System.getProperty("user.dir"));
 
@@ -48,6 +44,7 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         }
         AL.info("Starting application...");
         SpringApplication springApp = new SpringApplication(App.class);
+
         Properties props = new Properties();
         port = new ServerSocket(0).getLocalPort(); // get random free port
         props.put("server.port", port);
@@ -57,6 +54,7 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         context = springApp.run(args);
         AL.info("SpringBoot context initialized.");
         System.setProperty("java.awt.headless", "false");
+
         window = new Window();
         window.setTitle("My Todo");
         window.setIconImage(getResourceImage("/icons/icon.png"));

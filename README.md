@@ -4,6 +4,12 @@ and HTML frontend within minutes. **Keep in mind that this project is still in b
 
 ![](.github/images/img.png)
 
+To get started clone this repo and run the `start` task:
+
+![](.github/images/img_1.png) <br>
+
+This task will package the project and run the jar.
+
 **TODO**
  - Executables for Windows/Linux/Mac via JavaPackager. Currently, only
 a shaded .jar gets generated that can be double-clicked to open the window
@@ -12,6 +18,11 @@ a shaded .jar gets generated that can be double-clicked to open the window
  - Minimize shaded jar to save disk space.
  - Install jcef globally to save disk space.
  - Fix few seconds of blank screen on first page load.
+
+## Prerequisites
+
+- Java 8 (JDK) or higher.
+- Node.js
 
 ## Running the application
 
