@@ -10,6 +10,8 @@ a shaded .jar gets generated that can be double-clicked to open the window
 (first time takes a bit since jcef gets downloaded).
  - Bundle jcef with installer to avoid waiting at first launch.
 
+![](.github/images/img.png)
+
 ## Running the application
 
 The project is a standard Maven project. To run it from the command line,

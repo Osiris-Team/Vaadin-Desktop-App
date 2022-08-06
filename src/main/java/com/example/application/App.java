@@ -14,10 +14,14 @@ import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.metrics.ApplicationStartup;
 import org.springframework.core.metrics.StartupStep;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Properties;
 
 /**
@@ -54,7 +58,26 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         AL.info("SpringBoot context initialized.");
         System.setProperty("java.awt.headless", "false");
         window = new Window();
+        window.setTitle("My Todo");
+        window.setIconImage(getResourceImage("/icons/icon.png"));
         AL.info("Created main window.");
         AL.info("Started application successfully!");
+    }
+
+    /**
+     * @param path expected to be child of /META-INF/resources. Example: icon.png or /icon.png
+     */
+    public static Image getResourceImage(String path) throws IOException {
+        String defaultPath = "/META-INF/resources";
+        String fullPath = defaultPath + (path.startsWith("/") ? path : "/" + path);
+        File img = new File(App.workingDir + fullPath);
+        if (!img.exists()) {
+            img.getParentFile().mkdirs();
+            img.createNewFile();
+            InputStream link = (App.class.getResourceAsStream(fullPath));
+            Files.copy(link, img.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            link.close();
+        }
+        return Toolkit.getDefaultToolkit().getImage(img.getAbsolutePath());
     }
 }
