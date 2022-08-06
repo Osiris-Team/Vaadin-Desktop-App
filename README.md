@@ -18,6 +18,7 @@ a shaded .jar gets generated that can be double-clicked to open the window
  - Minimize shaded jar to save disk space.
  - Install jcef globally to save disk space.
  - Fix few seconds of blank screen on first page load.
+ - Fix high memory usage.
 
 ## Prerequisites
 
