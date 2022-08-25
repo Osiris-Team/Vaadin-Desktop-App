@@ -1,6 +1,8 @@
 # Vaadin-Desktop-App
 Template to create a Windows/Linux/Mac desktop app with a server-side UI
 and HTML frontend within minutes. **Keep in mind that this project is still in beta and not released yet.**
+It uses JCEF (Java Chromium Embedded Framework) to render HTML/CSS and
+run JavaScript on the client-side and Java/Vaadin on the server-side.
 
 ![](.github/images/img.png)
 
