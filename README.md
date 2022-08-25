@@ -10,7 +10,7 @@ To get started clone this repo and run the `start` task:
 
 This task will package the project and run the jar.
 
-**TODO**
+**TODO for 1.0 stable release:**
  - Executables for Windows/Linux/Mac via JavaPackager. Currently, only
 a shaded .jar gets generated that can be double-clicked to open the window
 (first time takes a bit since jcef gets downloaded).
