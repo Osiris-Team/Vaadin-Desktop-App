@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="added loading screen at first run">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNavItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNavItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/JLabel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/JLabel2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Swing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Swing.java" afterDir="false" />
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663428080829</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cleanup">
+      <created>1663428123382</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663428123382</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +211,7 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="readme" />
     <MESSAGE value="added loading screen at first run" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loading screen at first run" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
 </project>

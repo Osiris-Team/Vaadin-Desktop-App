@@ -117,7 +117,7 @@ public class Window extends JFrame {
             }
             width(widthPercent);
             height(heightPercent);
-            setIconImage(App.getResourceImage("/icons/icon.png"));
+            setIconImage(App.getIcon());
             setTitle(App.name);
             Swing.center(this);
             revalidate();
