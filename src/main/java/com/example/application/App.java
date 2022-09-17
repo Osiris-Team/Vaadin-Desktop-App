@@ -34,6 +34,7 @@ import java.util.Properties;
 public class App extends SpringBootServletInitializer implements AppShellConfigurator {
     public static ConfigurableApplicationContext context;
     public static com.example.application.swing.Window window;
+    public static final String name = "My Todo";
     public static int port;
     public static File workingDir = new File(System.getProperty("user.dir"));
 
@@ -56,10 +57,12 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         System.setProperty("java.awt.headless", "false");
 
         window = new Window();
-        window.setTitle("My Todo");
-        window.setIconImage(getResourceImage("/icons/icon.png"));
         AL.info("Created main window.");
         AL.info("Started application successfully!");
+    }
+
+    public static Image getIcon() throws IOException {
+        return getResourceImage("/icons/icon.png");
     }
 
     /**

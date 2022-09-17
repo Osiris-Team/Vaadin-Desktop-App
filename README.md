@@ -8,7 +8,7 @@ To get started clone this repo and run the `start` task in your IDE:
 
 ![](.github/images/img_1.png) <br>
 
-This task will package the project and run the jar.
+It creates a shaded jar and runs it (you can also double click it).
 
 **TODO for 1.0 stable release:**
  - Executables for Windows/Linux/Mac via JavaPackager. Currently, only

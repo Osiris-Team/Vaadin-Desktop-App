@@ -105,10 +105,17 @@
             <artifactId>jcefmaven</artifactId>
             <version>100.0.14.3</version>
         </dependency>
+
+        <!-- MY DEPENDENCIES -->
         <dependency>
             <groupId>com.github.Osiris-Team</groupId>
             <artifactId>AutoPlug-Core</artifactId>
             <version>15.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Osiris-Team</groupId>
+            <artifactId>Better-Layout</artifactId>
+            <version>1.4.0</version>
         </dependency>
 
         <!-- TEST -->

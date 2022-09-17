@@ -2,6 +2,7 @@ package com.example.application.swing;
 
 import com.example.application.App;
 import me.friwi.jcefmaven.CefAppBuilder;
+import me.friwi.jcefmaven.EnumProgress;
 import me.friwi.jcefmaven.MavenCefAppHandlerAdapter;
 import me.friwi.jcefmaven.impl.progress.ConsoleProgressHandler;
 import org.cef.CefApp;
@@ -14,6 +15,8 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -47,7 +50,7 @@ public class Window extends JFrame {
         try{
             // (0) Initialize CEF using the maven loader
             CefAppBuilder builder = new CefAppBuilder();
-            builder.setProgressHandler(new ConsoleProgressHandler());
+            builder.setProgressHandler(new FirstRunWindow().getProgressHandler());
             builder.getCefSettings().windowless_rendering_enabled = false;
             // USE builder.setAppHandler INSTEAD OF CefApp.addAppHandler!
             // Fixes compatibility issues with MacOSX
@@ -118,6 +121,9 @@ public class Window extends JFrame {
             }
             width(widthPercent);
             height(heightPercent);
+            setIconImage(App.getResourceImage("/icons/icon.png"));
+            setTitle(App.name);
+            Swing.center(this);
             revalidate();
             setVisible(true);
 
