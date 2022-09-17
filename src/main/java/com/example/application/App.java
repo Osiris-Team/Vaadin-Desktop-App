@@ -22,24 +22,23 @@ import java.util.Properties;
 
 /**
  * The entry point of the Spring Boot application.
- *
+ * <p>
  * Use the @PWA annotation make the application installable on phones, tablets
  * and some desktop browsers.
- *
  */
 @SpringBootApplication
 @Theme(value = "mytodo") // TODO customize themes in /frontend
 @PWA(name = "My Todo", shortName = "My Todo", offlineResources = {}) // TODO enter app details here
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class App extends SpringBootServletInitializer implements AppShellConfigurator {
+    public static final String name = "My Todo";
     public static ConfigurableApplicationContext context;
     public static com.example.application.swing.Window window;
-    public static final String name = "My Todo";
     public static int port;
     public static File workingDir = new File(System.getProperty("user.dir"));
 
     public static void main(String[] args) throws IOException {
-        if(!AL.isStarted){
+        if (!AL.isStarted) {
             AL.start("Logger", true, new File(workingDir + "/latest.log"), false);
             AL.mirrorSystemStreams(new File(workingDir + "/mirror-out.log"), new File(workingDir + "/mirror-err.log"));
         }
@@ -51,7 +50,7 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         props.put("server.port", port);
         props.put("security.require-ssl", "false");
         springApp.setDefaultProperties(props);
-        AL.info("Set default SpringBoot properties to: "+props.toString());
+        AL.info("Set default SpringBoot properties to: " + props);
         context = springApp.run(args);
         AL.info("SpringBoot context initialized.");
         System.setProperty("java.awt.headless", "false");

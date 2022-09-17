@@ -13,8 +13,8 @@ import com.vaadin.flow.router.Route;
 @Route(value = "", layout = MainLayout.class)
 public class MainView extends HorizontalLayout {
 
-    private TextField name;
-    private Button sayHello;
+    private final TextField name;
+    private final Button sayHello;
 
     public MainView() {
         name = new TextField("Your name");

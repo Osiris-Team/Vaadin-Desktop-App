@@ -2,9 +2,7 @@ package com.example.application.swing;
 
 import com.example.application.App;
 import me.friwi.jcefmaven.CefAppBuilder;
-import me.friwi.jcefmaven.EnumProgress;
 import me.friwi.jcefmaven.MavenCefAppHandlerAdapter;
-import me.friwi.jcefmaven.impl.progress.ConsoleProgressHandler;
 import org.cef.CefApp;
 import org.cef.CefClient;
 import org.cef.browser.CefBrowser;
@@ -15,23 +13,21 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  */
 public class Window extends JFrame {
-    private final CefApp cefApp;
-    private final CefClient client;
     public final CefBrowser browser;
     public final Component browserUI;
+    private final CefApp cefApp;
+    private final CefClient client;
 
     public Window() throws HeadlessException {
         this("http://localhost:" + App.port);
     }
 
-    public Window(String startURL){
+    public Window(String startURL) {
         this(startURL, false);
     }
 
@@ -47,7 +43,7 @@ public class Window extends JFrame {
      * way to the browser UI.
      */
     public Window(String startURL, boolean isTransparent, int widthPercent, int heightPercent) {
-        try{
+        try {
             // (0) Initialize CEF using the maven loader
             CefAppBuilder builder = new CefAppBuilder();
             builder.setProgressHandler(new FirstRunWindow().getProgressHandler());
@@ -115,7 +111,7 @@ public class Window extends JFrame {
             // (6) All UI components are assigned to the default content pane of this
             //     JFrame and afterwards the frame is made visible to the user.
             getContentPane().add(browserUI, BorderLayout.CENTER);
-            if(widthPercent <= 0 || heightPercent <= 0){
+            if (widthPercent <= 0 || heightPercent <= 0) {
                 widthPercent = 100;
                 heightPercent = 100;
             }
@@ -152,6 +148,7 @@ public class Window extends JFrame {
     /**
      * This invalidates the container and thus to see changes in the UI
      * make sure execute {@link Component#revalidate()} manually.
+     *
      * @param widthPercent 0 to 100% of the parent size (screen if null).
      */
     public void width(int widthPercent) {
@@ -169,6 +166,7 @@ public class Window extends JFrame {
     /**
      * This invalidates the container and thus to see changes in the UI
      * make sure execute {@link Component#revalidate()} manually.
+     *
      * @param heightPercent 0 to 100% of the parent size (screen if null).
      */
     public void height(int heightPercent) {

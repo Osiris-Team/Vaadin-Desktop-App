@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 public class FirstRunWindow extends JFrame {
     BLayout rootLayout;
     JLabel txtStatus = Swing.transparent(new JLabel("Loading..."));
+
     public FirstRunWindow() throws HeadlessException, IOException {
         super(App.name);
         setVisible(false);
@@ -37,30 +38,30 @@ public class FirstRunWindow extends JFrame {
         matchContentSize();
     }
 
-    private void matchContentSize(){
+    private void matchContentSize() {
         this.setSize(rootLayout.getPreferredSize().width,
                 rootLayout.getPreferredSize().height);
         Swing.center(this);
         Swing.roundCorners(this, 10, 10);
     }
 
-    public IProgressHandler getProgressHandler(){
+    public IProgressHandler getProgressHandler() {
         final Logger logger = Logger.getLogger(ConsoleProgressHandler.class.getName());
         return (state, percent) -> {
-            if(state == EnumProgress.INITIALIZED){
+            if (state == EnumProgress.INITIALIZED) {
                 this.setVisible(false);
                 this.dispose();
-            } else{
+            } else {
                 this.setVisible(true);
             }
             Objects.requireNonNull(state, "state cannot be null");
             if (percent == -1.0F || !(percent < 0.0F) && !(percent > 100.0F)) {
-                logger.log(Level.INFO, state + " |> " + (percent == -1.0F ? "" : (int)percent+"%")); // cast to int, since It's anyways always .0
+                logger.log(Level.INFO, state + " |> " + (percent == -1.0F ? "" : (int) percent + "%")); // cast to int, since It's anyways always .0
             } else {
                 throw new RuntimeException("percent has to be -1f or between 0f and 100f. Got " + percent + " instead");
             }
-            if(this.isVisible()){
-                txtStatus.setText("JCEF dependency: "+state.name().toLowerCase() + "... " + (percent == -1.0F ? "" : (int)percent+"%"));
+            if (this.isVisible()) {
+                txtStatus.setText("JCEF dependency: " + state.name().toLowerCase() + "... " + (percent == -1.0F ? "" : (int) percent + "%"));
                 matchContentSize();
             }
         };

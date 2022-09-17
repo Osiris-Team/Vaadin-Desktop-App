@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="readme">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/JLabel2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Swing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="added loading screen at first run">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNav.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNavItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNavItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/JLabel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/JLabel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Swing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Swing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661431225814</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added loading screen at first run">
+      <created>1663428080829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663428080829</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +210,7 @@
     <MESSAGE value="added layout" />
     <MESSAGE value="workspace" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="added loading screen at first run" />
+    <option name="LAST_COMMIT_MESSAGE" value="added loading screen at first run" />
   </component>
 </project>

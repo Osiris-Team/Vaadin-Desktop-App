@@ -1,10 +1,10 @@
 package com.example.application.swing;
 
-import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
+import java.awt.*;
 
 /**
  * Makes it possible to add an outline to the text.
@@ -12,13 +12,10 @@ import javax.swing.border.EmptyBorder;
 public class JLabel2 extends JLabel {
 
     private static final long serialVersionUID = 1L;
-
+    private final int thickness;
     private Color outlineColor = Color.WHITE;
-
     private boolean isPaintingOutline = false;
     private boolean forceTransparent = false;
-
-    private final int thickness;
 
     public JLabel2(int thickness) {
         super();
@@ -33,7 +30,7 @@ public class JLabel2 extends JLabel {
     }
 
     public JLabel2(String text, int horizontalAlignment,
-                        int thickness) {
+                   int thickness) {
         super(text, horizontalAlignment);
         this.thickness = thickness;
         setBorder(thickness);
