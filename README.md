@@ -4,7 +4,7 @@ and HTML frontend within minutes. **Keep in mind that this project is still in b
 
 ![](.github/images/img.png)
 
-To get started clone this repo and run the `start` task:
+To get started clone this repo and run the `start` task in your IDE:
 
 ![](.github/images/img_1.png) <br>
 
