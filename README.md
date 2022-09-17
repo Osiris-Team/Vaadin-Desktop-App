@@ -23,9 +23,8 @@ a shaded .jar gets generated that can be double-clicked to open the window
  **How?**
  
 It uses JCEF (Java Chromium Embedded Framework) to render HTML/CSS and
-run JavaScript on the client-side and Java/Vaadin on the server-side.
-Note that both (the client and server) are inside the shaded jar file
-and running on the client machine.
+run JavaScript on the client-side. On the "server-side" (which is also on the client
+since this is a regular desktop app) Java/Vaadin is used.
 
 ## Prerequisites
 
