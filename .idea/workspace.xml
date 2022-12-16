@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="cleanup">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" afterDir="false" />
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="icon">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663428123382</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="icon">
+      <created>1663428462645</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663428462645</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +220,7 @@
     <MESSAGE value="readme" />
     <MESSAGE value="added loading screen at first run" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="icon" />
   </component>
 </project>

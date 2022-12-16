@@ -39,19 +39,19 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
      * Should be the directory in which this application was started. <br>
      * Can be used to store information that is not specific to an user. <br>
      */
-    public static File workingDir = new File(System.getProperty("user.dir"));
+    public static final File workingDir = new File(System.getProperty("user.dir"));
     /**
      * Should get cleared by the operating system on reboots. <br>
      * Example on Windows: <br>
-     * C:\Users\user-name\AppData\Local\Temp\app-name
+     * C:\Users\UserName\AppData\Local\Temp\AppName
      */
-    public static File tempDir = new File(System.getProperty("java.io.tmpdir") + "/" + name);
+    public static final File tempDir = new File(System.getProperty("java.io.tmpdir") + "/" + name);
      /**
      * Can be used to store user-specific data. <br>
      * Example on Windows: <br>
-     * C:\Users\user-name\app-name
+     * C:\Users\UserName\AppName
      */
-    public static File userDir = new File(System.getProperty("user.home") + "/" + name);
+    public static final File userDir = new File(System.getProperty("user.home") + "/" + name);
 
     public static void main(String[] args) throws IOException {
         if (!AL.isStarted) {
