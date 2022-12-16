@@ -35,7 +35,23 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
     public static ConfigurableApplicationContext context;
     public static com.example.application.swing.Window window;
     public static int port;
+    /**
+     * Should be the directory in which this application was started. <br>
+     * Can be used to store information that is not specific to an user. <br>
+     */
     public static File workingDir = new File(System.getProperty("user.dir"));
+    /**
+     * Should get cleared by the operating system on reboots. <br>
+     * Example on Windows: <br>
+     * C:\Users\user-name\AppData\Local\Temp\app-name
+     */
+    public static File tempDir = new File(System.getProperty("java.io.tmpdir") + "/" + name);
+     /**
+     * Can be used to store user-specific data. <br>
+     * Example on Windows: <br>
+     * C:\Users\user-name\app-name
+     */
+    public static File userDir = new File(System.getProperty("user.home") + "/" + name);
 
     public static void main(String[] args) throws IOException {
         if (!AL.isStarted) {
@@ -43,6 +59,9 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
             AL.mirrorSystemStreams(new File(workingDir + "/mirror-out.log"), new File(workingDir + "/mirror-err.log"));
         }
         AL.info("Starting application...");
+        AL.info("workingDir = " + workingDir);
+        AL.info("tempDir = " + tempDir);
+        AL.info("userDir = " + userDir);
         SpringApplication springApp = new SpringApplication(App.class);
 
         Properties props = new Properties();
