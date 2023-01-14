@@ -195,8 +195,9 @@
                 <configuration>
                     <bundleJre>true</bundleJre>
                     <mainClass>${main.class}</mainClass>
-                    <generateInstaller>false</generateInstaller>
+                    <generateInstaller>true</generateInstaller>
                     <copyDependencies>true</copyDependencies>
+                    <runnableJar>false</runnableJar>
                 </configuration>
                 <executions>
                     <execution>
@@ -207,7 +208,6 @@
                         </goals>
                         <configuration>
                             <platform>windows</platform>
-                            <createZipball>true</createZipball>
                             <nativeImage>true</nativeImage>
                             <bundleJre>true</bundleJre>
                         </configuration>
