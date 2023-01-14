@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="fix release.yml">
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="fix pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673718338308</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix pom">
+      <created>1673720922612</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673720922612</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +265,7 @@
     <MESSAGE value="l" />
     <MESSAGE value="release.yml" />
     <MESSAGE value="fix release.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix release.yml" />
+    <MESSAGE value="fix pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix pom" />
   </component>
 </project>
