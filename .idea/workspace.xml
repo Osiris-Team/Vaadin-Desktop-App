@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="release.yml">
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="fix release.yml">
       <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673717713585</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix release.yml">
+      <created>1673718223665</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673718223666</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +243,7 @@
     <MESSAGE value="icon" />
     <MESSAGE value="l" />
     <MESSAGE value="release.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="release.yml" />
+    <MESSAGE value="fix release.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix release.yml" />
   </component>
 </project>
