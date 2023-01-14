@@ -13,6 +13,7 @@
         <java.version>16</java.version>
         <vaadin.version>23.1.4</vaadin.version>
         <selenium.version>4.2.1</selenium.version>
+        <main.class>com.example.application.App</main.class>
     </properties>
 
     <parent>
@@ -66,6 +67,10 @@
             <url>
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -181,6 +186,57 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Generate native installers/binaries/archives -->
+            <plugin>
+                <groupId>com.github.Osiris-Team</groupId>
+                <artifactId>JavaPackager</artifactId>
+                <version>2.0.0</version>
+                <configuration>
+                    <bundleJre>true</bundleJre>
+                    <mainClass>${main.class}</mainClass>
+                    <generateInstaller>false</generateInstaller>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>bundling-for-windows</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <platform>windows</platform>
+                            <createZipball>true</createZipball>
+                            <nativeImage>true</nativeImage>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>bundling-for-linux</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <platform>linux</platform>
+                            <createTarball>true</createTarball>
+                            <nativeImage>true</nativeImage>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>bundling-for-mac</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <platform>mac</platform>
+                            <createTarball>true</createTarball>
+                            <nativeImage>true</nativeImage>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
