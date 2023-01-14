@@ -33,8 +33,10 @@ jobs:
           draft: false
           prerelease: false
 
+  build-windows:
+    runs-on: windows-latest
+    steps:
       - name: Build and upload Windows binary
-        runs-on: windows-latest
         shell: pwsh
         run: |
           echo "C:\Program Files (x86)\WiX Toolset v3.11\bin" >> $GITHUB_PATH
@@ -49,8 +51,10 @@ jobs:
           name: my-artifact
           path: ./target/*.*
 
+  build-mac:
+    runs-on: macos-latest
+    steps:
       - name: Build and upload Mac binary
-        runs-on: macos-latest
         shell: pwsh
         run: |
           mvn -B package --file pom.xml -DskipTests
@@ -64,8 +68,10 @@ jobs:
           name: my-artifact
           path: ./target/*.*
 
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build and upload Linux binary
-        runs-on: ubuntu-latest
         shell: pwsh
         run: |
           mvn -B package --file pom.xml -DskipTests
