@@ -39,6 +39,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up JDK 16
+        uses: actions/setup-java@v3
+        with:
+          java-version: '16'
+          distribution: 'temurin'
+          cache: maven
       - name: Build and upload Windows binary
         shell: pwsh
         run: |
@@ -60,6 +66,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up JDK 16
+        uses: actions/setup-java@v3
+        with:
+          java-version: '16'
+          distribution: 'temurin'
+          cache: maven
       - name: Build and upload Mac binary
         shell: pwsh
         run: |
@@ -80,6 +92,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up JDK 16
+        uses: actions/setup-java@v3
+        with:
+          java-version: '16'
+          distribution: 'temurin'
+          cache: maven
       - name: Build and upload Linux binary
         shell: pwsh
         run: |
