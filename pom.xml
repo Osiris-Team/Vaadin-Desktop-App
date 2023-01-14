@@ -196,6 +196,7 @@
                     <bundleJre>true</bundleJre>
                     <mainClass>${main.class}</mainClass>
                     <generateInstaller>false</generateInstaller>
+                    <copyDependencies>true</copyDependencies>
                 </configuration>
                 <executions>
                     <execution>
@@ -208,6 +209,7 @@
                             <platform>windows</platform>
                             <createZipball>true</createZipball>
                             <nativeImage>true</nativeImage>
+                            <bundleJre>true</bundleJre>
                         </configuration>
                     </execution>
                     <execution>
@@ -220,6 +222,7 @@
                             <platform>linux</platform>
                             <createTarball>true</createTarball>
                             <nativeImage>true</nativeImage>
+                            <bundleJre>true</bundleJre>
                         </configuration>
                     </execution>
                     <execution>
@@ -232,6 +235,7 @@
                             <platform>mac</platform>
                             <createTarball>true</createTarball>
                             <nativeImage>true</nativeImage>
+                            <bundleJre>true</bundleJre>
                         </configuration>
                     </execution>
                 </executions>
