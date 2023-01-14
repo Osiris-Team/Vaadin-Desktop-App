@@ -209,7 +209,7 @@
                         <configuration>
                             <platform>windows</platform>
                             <nativeImage>true</nativeImage>
-                            <bundleJre>true</bundleJre>
+                            <bundleJre>false</bundleJre>
                         </configuration>
                     </execution>
                     <execution>
@@ -222,7 +222,7 @@
                             <platform>linux</platform>
                             <createTarball>true</createTarball>
                             <nativeImage>true</nativeImage>
-                            <bundleJre>true</bundleJre>
+                            <bundleJre>false</bundleJre>
                         </configuration>
                     </execution>
                     <execution>
@@ -235,7 +235,7 @@
                             <platform>mac</platform>
                             <createTarball>true</createTarball>
                             <nativeImage>true</nativeImage>
-                            <bundleJre>true</bundleJre>
+                            <bundleJre>false</bundleJre>
                         </configuration>
                     </execution>
                 </executions>

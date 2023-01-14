@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="fix release.yml">
       <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <recent name="com.example.application" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.start">
+  <component name="RunManager" selected="Maven.package">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="start" type="JarApplication" />
       <toRun name="package" type="MavenRunConfiguration" />
@@ -265,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673725233168</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix release.yml">
+      <created>1673726115131</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1673726115131</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
