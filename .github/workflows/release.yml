@@ -49,7 +49,7 @@ jobs:
         shell: pwsh
         run: |
           echo "C:\Program Files (x86)\WiX Toolset v3.11\bin" >> $GITHUB_PATH
-          mvn -B package -P production,native --file pom.xml -DskipTests -H:+ReportExceptionStackTraces -e
+          mvn -e -B package -P production,native --file pom.xml -DskipTests
           echo Showing current directory:
           ls
           echo Showing ./target directory:
@@ -75,7 +75,7 @@ jobs:
       - name: Build and upload Mac binary
         shell: pwsh
         run: |
-          mvn -B package -P production,native --file pom.xml -DskipTests -H:+ReportExceptionStackTraces -e
+          mvn -e -B package -P production,native --file pom.xml -DskipTests
           echo Showing current directory:
           ls
           echo Showing ./target directory:
@@ -101,7 +101,7 @@ jobs:
       - name: Build and upload Linux binary
         shell: pwsh
         run: |
-          mvn -B package -P production,native --file pom.xml -DskipTests -H:+ReportExceptionStackTraces -e
+          mvn -e -B package -P production,native --file pom.xml -DskipTests
           echo Showing current directory:
           ls
           echo Showing ./target directory:
