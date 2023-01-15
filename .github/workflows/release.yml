@@ -16,7 +16,7 @@ on:
         required: true
 
 jobs:
-  release:
+  create_release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,14 +24,12 @@ jobs:
 
       - name: Create release
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.inputs.version }}
-          release_name: ${{ github.event.inputs.version }}
+          name: ${{ github.event.inputs.version }}
           draft: false
           prerelease: false
+          generate_release_notes: false
 
   build-windows:
     runs-on: windows-latest
@@ -53,11 +51,11 @@ jobs:
           echo Showing current directory:
           ls
           echo Showing ./target directory:
-          ls ./target
+          ls ./target -lR
       - name: upload artifacts
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: ${{ needs.release.outputs.tag-name }}
           files: ./target/*.*
 
   build-mac:
@@ -77,13 +75,13 @@ jobs:
         run: |
           mvn -e -B package -P production,native --file pom.xml -DskipTests
           echo Showing current directory:
-          ls
+          ls -lR
           echo Showing ./target directory:
-          ls ./target
+          ls ./target -lR
       - name: upload artifacts
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: ${{ needs.release.outputs.tag-name }}
           files: ./target/*.*
 
   build-linux:
@@ -105,9 +103,9 @@ jobs:
           echo Showing current directory:
           ls
           echo Showing ./target directory:
-          ls ./target
+          ls ./target -lR
       - name: upload artifacts
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: ${{ needs.create_release.outputs.tag-name }}
           files: ./target/*.*
