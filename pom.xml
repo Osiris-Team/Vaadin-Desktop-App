@@ -69,8 +69,15 @@
             </url>
         </pluginRepository>
         <pluginRepository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>graalvm-native-build-tools-snapshots</id>
+            <name>GraalVM native-build-tools Snapshots</name>
+            <url>https://raw.githubusercontent.com/graalvm/native-build-tools/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </pluginRepository>
     </pluginRepositories>
 
@@ -187,64 +194,43 @@
                 </executions>
             </plugin>
 
-            <!-- Generate native installers/binaries/archives -->
-            <plugin>
-                <groupId>com.github.Osiris-Team</groupId>
-                <artifactId>JavaPackager</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <bundleJre>true</bundleJre>
-                    <mainClass>${main.class}</mainClass>
-                    <generateInstaller>true</generateInstaller>
-                    <copyDependencies>true</copyDependencies>
-                    <runnableJar>false</runnableJar>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>bundling-for-windows</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>package</goal>
-                        </goals>
-                        <configuration>
-                            <platform>windows</platform>
-                            <nativeImage>true</nativeImage>
-                            <bundleJre>false</bundleJre>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>bundling-for-linux</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>package</goal>
-                        </goals>
-                        <configuration>
-                            <platform>linux</platform>
-                            <createTarball>true</createTarball>
-                            <nativeImage>true</nativeImage>
-                            <bundleJre>false</bundleJre>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>bundling-for-mac</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>package</goal>
-                        </goals>
-                        <configuration>
-                            <platform>mac</platform>
-                            <createTarball>true</createTarball>
-                            <nativeImage>true</nativeImage>
-                            <bundleJre>false</bundleJre>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
         </plugins>
     </build>
 
     <profiles>
+        <profile>
+            <id>native</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <version>0.9.19</version>
+                        <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>build-native</id>
+                                <goals>
+                                    <goal>compile-no-fork</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                            <execution>
+                                <id>test-native</id>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <phase>test</phase>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <!-- ... -->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
         <profile>
             <!-- Production mode is activated using -Pproduction -->
             <id>production</id>
