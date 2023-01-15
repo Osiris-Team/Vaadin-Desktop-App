@@ -16,7 +16,7 @@ on:
         required: true
 
 jobs:
-  create_release:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -109,7 +109,7 @@ jobs:
           echo Showing current directory:
           ls
           echo Showing ./target directory:
-          ls ./target -lR
+          ls ./target 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
