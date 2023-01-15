@@ -45,13 +45,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload Windows binary
         shell: pwsh
-        run: |
-          echo "C:\Program Files (x86)\WiX Toolset v3.11\bin" >> $GITHUB_PATH
-          mvn -e -B package -P production,native --file pom.xml -DskipTests
-          echo Showing current directory:
-          ls
-          echo Showing ./target directory:
-          ls ./target -lR
+        run: mvn -e -B package -P production,native --file pom.xml -DskipTests
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -79,12 +73,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload Mac binary
         shell: pwsh
-        run: |
-          mvn -e -B package -P production,native --file pom.xml -DskipTests
-          echo Showing current directory:
-          ls -lR
-          echo Showing ./target directory:
-          ls ./target -lR
+        run: mvn -e -B package -P production,native --file pom.xml -DskipTests
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -112,12 +101,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and upload Linux binary
         shell: pwsh
-        run: |
-          mvn -e -B package -P production,native --file pom.xml -DskipTests
-          echo Showing current directory:
-          ls
-          echo Showing ./target directory:
-          ls ./target 
+        run: mvn -e -B package -P production,native --file pom.xml -DskipTests
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
