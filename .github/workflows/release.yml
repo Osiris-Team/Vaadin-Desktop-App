@@ -60,6 +60,10 @@ jobs:
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: target-windows
+          path: ./target/
 
   build-mac:
     runs-on: macos-latest
@@ -89,6 +93,10 @@ jobs:
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: target-mac
+          path: ./target/
 
   build-linux:
     runs-on: ubuntu-latest
@@ -118,3 +126,7 @@ jobs:
           tag: ${{ github.event.inputs.version }}
           overwrite: true
           file_glob: true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: target-linux
+          path: ./target/
