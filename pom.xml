@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <vaadin.version>23.1.4</vaadin.version>
+        <vaadin.version>23.3.5</vaadin.version>
         <selenium.version>4.2.1</selenium.version>
         <main.class>com.example.application.App</main.class>
     </properties>
@@ -93,6 +93,8 @@
     </dependencyManagement>
 
     <dependencies>
+
+        <!-- VAADIN DEPENDENCIES -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
@@ -111,11 +113,6 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>me.friwi</groupId>
-            <artifactId>jcefmaven</artifactId>
-            <version>100.0.14.3</version>
-        </dependency>
 
         <!-- MY DEPENDENCIES -->
         <dependency>
@@ -127,6 +124,12 @@
             <groupId>com.github.Osiris-Team</groupId>
             <artifactId>Better-Layout</artifactId>
             <version>1.4.0</version>
+        </dependency>
+        <!-- https://github.com/jcefmaven/jcefmaven -->
+        <dependency>
+            <groupId>me.friwi</groupId>
+            <artifactId>jcefmaven</artifactId>
+            <version>109.1.11</version>
         </dependency>
 
         <!-- TEST -->

@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+    	mavenCentral()
+	    maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
+        maven { setUrl("https://maven.vaadin.com/vaadin-addons") }
+		}
+}
+plugins {
+	id 'org.springframework.boot' version '2.7.6'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+	id 'com.vaadin'
+}
+
+defaultTasks("clean", "build")
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
+	maven { setUrl("https://maven.vaadin.com/vaadin-addons") }
+    maven { setUrl("https://jitpack.io") }
+}
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+dependencies {
+	// PRODUCTION
+	implementation'com.vaadin:vaadin-spring-boot-starter'
+	implementation "com.github.Osiris-Team:AutoPlug-Core:15.1"
+	implementation "com.github.Osiris-Team:Better-Layout:1.4.0"
+	implementation "me.friwi:jcefmaven:109.1.11"
+
+
+	// TEST
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "com.vaadin:vaadin-bom:$vaadinVersion"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+// The following pnpmEnable = true is not needed as pnpm is used by default,
+// this is just an example of how to configure the Gradle Vaadin Plugin:
+// for more configuration options please see: https://vaadin.com/docs/latest/guide/start/gradle/#all-options
+vaadin {
+	pnpmEnable = true
+}

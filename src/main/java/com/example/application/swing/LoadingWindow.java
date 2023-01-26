@@ -20,6 +20,7 @@ public class LoadingWindow extends JFrame {
 
     public LoadingWindow() throws HeadlessException, IOException {
         super(App.name);
+        setIconImage(App.getIcon());
         setVisible(false);
         setUndecorated(true);
         this.rootLayout = new BLayout(this, true);
@@ -45,6 +46,7 @@ public class LoadingWindow extends JFrame {
     public IProgressHandler getProgressHandler() {
         final Logger logger = Logger.getLogger(ConsoleProgressHandler.class.getName());
         return (state, percent) -> {
+            AL.info(""+state);
             if (state == EnumProgress.INITIALIZED) {
                 this.setVisible(false);
                 this.dispose();

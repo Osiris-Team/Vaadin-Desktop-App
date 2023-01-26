@@ -1,5 +1,6 @@
 package com.example.application;
 
+import com.example.application.swing.DevToolsDialog;
 import com.example.application.swing.LoadingWindow;
 import com.example.application.swing.Window;
 import com.osiris.autoplug.core.logger.AL;
@@ -63,8 +64,8 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         AL.info("workingDir = " + workingDir);
         AL.info("tempDir = " + tempDir);
         AL.info("userDir = " + userDir);
-        LoadingWindow win = new LoadingWindow();
-        win.setVisible(true);
+        //LoadingWindow loadingWin = new LoadingWindow();
+        //loadingWin.setVisible(true);
         SpringApplication springApp = new SpringApplication(App.class);
 
         Properties props = new Properties();
@@ -77,8 +78,9 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         AL.info("SpringBoot context initialized.");
         System.setProperty("java.awt.headless", "false");
 
-        win.setVisible(false);
+        //loadingWin.setVisible(false);
         window = new Window();
+        new DevToolsDialog("DevTools", window.browser).setVisible(true); // TODO remove devtools in production
         AL.info("Created main window.");
         AL.info("Started application successfully!");
     }
