@@ -64,8 +64,8 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         AL.info("workingDir = " + workingDir);
         AL.info("tempDir = " + tempDir);
         AL.info("userDir = " + userDir);
-        //LoadingWindow loadingWin = new LoadingWindow();
-        //loadingWin.setVisible(true);
+        LoadingWindow loadingWin = new LoadingWindow();
+        loadingWin.setVisible(true);
         SpringApplication springApp = new SpringApplication(App.class);
 
         Properties props = new Properties();
@@ -77,12 +77,11 @@ public class App extends SpringBootServletInitializer implements AppShellConfigu
         context = springApp.run(args);
         AL.info("SpringBoot context initialized.");
         System.setProperty("java.awt.headless", "false");
-
-        //loadingWin.setVisible(false);
         window = new Window();
         new DevToolsDialog("DevTools", window.browser).setVisible(true); // TODO remove devtools in production
         AL.info("Created main window.");
         AL.info("Started application successfully!");
+        loadingWin.close();
     }
 
     public static Image getIcon() throws IOException {

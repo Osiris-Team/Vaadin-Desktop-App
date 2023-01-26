@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="added devtools, added gradle, upgraded vaadin version, added Layout class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/DevToolsDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/Layout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNav.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/components/AppNavItem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/LoadingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/LoadingWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/views/about/AboutView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/about/AboutView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/views/main/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +111,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="RunManager" selected="Gradle.Vaadin-Desktop-App [production-build]">
+  <component name="RunManager" selected="Gradle.Vaadin-Desktop-App [bootRun]">
     <configuration name="Vaadin-Desktop-App [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -240,8 +224,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Vaadin-Desktop-App [production-build]" />
         <item itemvalue="Gradle.Vaadin-Desktop-App [bootRun]" />
+        <item itemvalue="Gradle.Vaadin-Desktop-App [production-build]" />
         <item itemvalue="Gradle.Vaadin-Desktop-App [vaadinBuildFrontend]" />
         <item itemvalue="Gradle.Vaadin-Desktop-App [dependencies]" />
         <item itemvalue="Gradle.Vaadin-Desktop-App [assemble]" />
@@ -249,6 +233,14 @@
     </recent_temporary>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="added devtools, added gradle, upgraded vaadin version, added Layout class">
+      <created>1674749864790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674749864790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

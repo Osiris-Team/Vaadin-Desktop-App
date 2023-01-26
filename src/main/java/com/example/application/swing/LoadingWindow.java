@@ -48,8 +48,7 @@ public class LoadingWindow extends JFrame {
         return (state, percent) -> {
             AL.info(""+state);
             if (state == EnumProgress.INITIALIZED) {
-                this.setVisible(false);
-                this.dispose();
+                close();
             } else {
                 this.setVisible(true);
             }
@@ -64,5 +63,10 @@ public class LoadingWindow extends JFrame {
                 //matchContentSize();
             }
         };
+    }
+
+    public void close() {
+        setVisible(false);
+        dispose();
     }
 }
