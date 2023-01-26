@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="fix release.yml">
+    <list default="true" id="78384e8b-0412-4b81-a506-d464ed6560da" name="Changes" comment="g">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/FirstRunWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/LoadingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/application/swing/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="86q288q5" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -54,6 +60,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/mytodo-1.0-SNAPSHOT.jar" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -63,7 +72,7 @@
       <recent name="com.example.application" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.package">
+  <component name="RunManager" selected="JAR Application.start">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="start" type="JarApplication" />
       <toRun name="package" type="MavenRunConfiguration" />
@@ -363,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673785107624</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix release.yml">
+      <created>1673786325632</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1673786325632</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,6 +408,7 @@
     <MESSAGE value="release.yml" />
     <MESSAGE value="fix pom" />
     <MESSAGE value="fix release.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix release.yml" />
+    <MESSAGE value="g" />
+    <option name="LAST_COMMIT_MESSAGE" value="g" />
   </component>
 </project>

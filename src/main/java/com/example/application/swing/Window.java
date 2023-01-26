@@ -46,7 +46,7 @@ public class Window extends JFrame {
         try {
             // (0) Initialize CEF using the maven loader
             CefAppBuilder builder = new CefAppBuilder();
-            builder.setProgressHandler(new FirstRunWindow().getProgressHandler());
+            builder.setProgressHandler(new LoadingWindow().getProgressHandler());
             builder.getCefSettings().windowless_rendering_enabled = false;
             // USE builder.setAppHandler INSTEAD OF CefApp.addAppHandler!
             // Fixes compatibility issues with MacOSX

@@ -1,6 +1,7 @@
 package com.example.application.swing;
 
 import com.example.application.App;
+import com.osiris.autoplug.core.logger.AL;
 import com.osiris.betterlayout.BLayout;
 import me.friwi.jcefmaven.EnumProgress;
 import me.friwi.jcefmaven.IProgressHandler;
@@ -13,11 +14,11 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class FirstRunWindow extends JFrame {
+public class LoadingWindow extends JFrame {
     BLayout rootLayout;
     JLabel txtStatus = Swing.transparent(new JLabel("Loading..."));
 
-    public FirstRunWindow() throws HeadlessException, IOException {
+    public LoadingWindow() throws HeadlessException, IOException {
         super(App.name);
         setVisible(false);
         setUndecorated(true);
@@ -31,16 +32,12 @@ public class FirstRunWindow extends JFrame {
         title.add(Swing.transparent(Swing.image(icon, 30, 30)));
         JLabel appName = new JLabel(App.name);
         title.add(appName);
+        title.add(txtStatus);
         appName.setForeground(Color.GRAY);
         rootLayout.addV(txtStatus);
         txtStatus.setForeground(Color.GRAY);
 
-        matchContentSize();
-    }
-
-    private void matchContentSize() {
-        this.setSize(rootLayout.getPreferredSize().width,
-                rootLayout.getPreferredSize().height);
+        setSize(300, 100);
         Swing.center(this);
         Swing.roundCorners(this, 10, 10);
     }
@@ -62,7 +59,7 @@ public class FirstRunWindow extends JFrame {
             }
             if (this.isVisible()) {
                 txtStatus.setText("JCEF dependency: " + state.name().toLowerCase() + "... " + (percent == -1.0F ? "" : (int) percent + "%"));
-                matchContentSize();
+                //matchContentSize();
             }
         };
     }
