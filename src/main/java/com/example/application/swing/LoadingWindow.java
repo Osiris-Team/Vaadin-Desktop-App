@@ -1,11 +1,7 @@
 package com.example.application.swing;
 
 import com.example.application.App;
-import com.osiris.autoplug.core.logger.AL;
 import com.osiris.betterlayout.BLayout;
-import me.friwi.jcefmaven.EnumProgress;
-import me.friwi.jcefmaven.IProgressHandler;
-import me.friwi.jcefmaven.impl.progress.ConsoleProgressHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,27 +36,5 @@ public class LoadingWindow extends JFrame {
         setSize(300, 100);
         Swing.center(this);
         Swing.roundCorners(this, 10, 10);
-    }
-
-    public IProgressHandler getProgressHandler() {
-        final Logger logger = Logger.getLogger(ConsoleProgressHandler.class.getName());
-        return (state, percent) -> {
-            if (state == EnumProgress.INITIALIZED) {
-                this.setVisible(false);
-                this.dispose();
-            } else {
-                this.setVisible(true);
-            }
-            Objects.requireNonNull(state, "state cannot be null");
-            if (percent == -1.0F || !(percent < 0.0F) && !(percent > 100.0F)) {
-                logger.log(Level.INFO, state + " |> " + (percent == -1.0F ? "" : (int) percent + "%")); // cast to int, since It's anyways always .0
-            } else {
-                throw new RuntimeException("percent has to be -1f or between 0f and 100f. Got " + percent + " instead");
-            }
-            if (this.isVisible()) {
-                txtStatus.setText("JCEF dependency: " + state.name().toLowerCase() + "... " + (percent == -1.0F ? "" : (int) percent + "%"));
-                //matchContentSize();
-            }
-        };
     }
 }
